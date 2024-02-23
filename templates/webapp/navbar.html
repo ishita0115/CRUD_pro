@@ -2,12 +2,12 @@
   <div class="container">
     <a class="navbar-brand" href="{% url 'dashboard' %}">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAZlBMVEX///8AAACTk5MVFRXY2Nh5eXm9vb2Ojo78/Pzz8/PR0dHMzMz39/cEBARra2vf398jIyNNTU2FhYU8PDwoKCjl5eWysrJdXV0aGho1NTWjo6Pt7e1iYmLExMSdnZ1zc3NVVVVDQ0Px5h+hAAAEgUlEQVR4nO2biZKiMBCGCSj3LaACXu//kptO0GIcIQ22cao2/1ZtzTIxfObo7nRnLcvIyMjIyMjIyMjIyMjIyMjof1QcNTZKTRTrIfKtes/Q2td6qDYVnomxaqMFqmBJgkXiLQsdTNGScQJFGqBKhh4nMVas1ACVsiVUvGn6eaZ6t3T6dp/fgJGzFMohXVTBQyMT2CxlYqyhQ8rO1+KufRuA1QT1y6F6Mqb65zRduwFqORNjVEzxsysZNna2Biojgtocxr3yjb3rxPPTGqjTR6C4jnJjl2ugqMznBJSfroHqiQKYCah6UYRwV/WW+fQfP2W/oMSaWuyNpd40n/XZEyqfDXde8qd2v8wbSyWst70Znbt5puCofMEKqT50DGahNos9G4Wc+ejUQBmo10qejhujf311pK6ncNDGHtvBb0IdxoZ97ES/CfXjBNj+FSh/9KY/A6VxpBJxOoe/hz9Tzaqxj/M+C4VXH2V3tfmnoapduuVBRLlNd9PxFoygkw+qPman5FQdy6Z+ePmgbsojwwQT4xakI8U7LppfYUfQFAsDHNrpu7n+q1589/Y1qNweDgR+UGentj1lWTBAxnau/jwaakFXVSiD+q7ZFvdnxbYZ9n245IgxD5VdtliV0pNl3vMbPHkgrkt0VxeqI7RU7L2Yb8dbfM57uTRX6jSxcnKqg/oKtZPbwmnFt6cZgM5FSabBvEkjyR97okmD62/+4IfcfTYMQjtjuPkvWujPxvVHYadSmBZX1cq1sAkREuPJDZRVq87SMiWCSj68D5WwFBawcgigHW940QIlcyihskCTyBEN9UBBCsxHJYl7PqIxoiUBlA3f38HkXxwYKsQGJICCrbdVNwNteVNfB9QOXoQMASr4AupizvtQUJTqcEyMgalWm6r3ocDFtLiMXiLMurqa8z4UGASk95CbQm0/34RKJBQ6xV/qgGICins05PSBl9QFha6v9fqgUA5N6KJl+pI/u6b47kOuKS27j+tsoat+iaj0nTVAQUU4wEJBokG9KwiCPPBnyHtBe+hT3SVBlLBBTYkQTDWi6kwABTsqQ4UJFRzHETuVAOoa4F4lr94EhbolRYwOcUKMydZBSgFz44MC6gYtEYECGCnrpgUqwR4z70dW9YiSHEYLWFXdgU0es+D5oUOuKKr04kW0zedyCbl4Ee4aA1HOEyZw3qmJqr8y30AKxZ0aXzHdlb1YMvAALhH56IsxNFCJuDvhW92EuSrlb4/IGwNEI8XXjMwNRy9WTQrBqW+FM2vuI1BclVhXVhymPz7jpKFMw7r4nDUZFB+E85AE7lyv3+/yfLfvvXtVJEa6bFoo0PVxsSaOu7ru4keqOrou6YcOSqyXbfiqlxCZ/6CHkjr0UfAjMe0HUf98zUk3FFd+ad06Fqrd9gL5/q+W1tgdoDoKiQ2Hvxj+OSgCKaB+3XrTooOiirXqIuC7qmaRfOHXV11xWyt4mTs/UJZf6ocq58uDUA2zNc9gZWNqcJl7xv1XHQqdXdpSrZGRkZGRkZGRkZGRkZGRkdHf0D+wok5G7049MQAAAABJRU5ErkJggg==" width="40" height="35" class="d-inline-block">
-      Album Your memories
+      &nbsp; Album Your memories
     </a>
     {% if user.is_authenticated %}
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
-      <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Sign out</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard  &nbsp; <i class="fa fa-home" aria-hidden="true"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Sign out &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
     </ul>
     {% else %}
     <ul class="navbar-nav ml-auto">

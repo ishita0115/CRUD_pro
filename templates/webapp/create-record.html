@@ -6,9 +6,7 @@
 <body>
     <div class="container bg-light shadow-md p-5 form-layout">
         <h3>CREATE RECORD </h3>
-        <hr>
-        <br>
-        <h4>start adding the requirment record</h4>
+        <h6>start adding the requirment record</h6>
         <hr>
         <br>
         <form action="" method="POST" autocomplete="off">
@@ -16,7 +14,11 @@
     
             {{form|crispy}}
             <br>
-            <button type="submit" class="btn btn-primary w-100 btn-block p-2">Add finally..</button>
+            <button type="submit" class="btn btn-primary w-100 btn-block p-2">Add finally..</button> 
+            <br>
+            <br>
+            <div class="text-center">
+            <a href="{% url 'dashboard' %}" class="btn btn-secondary">Return &nbsp; <i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
         </form>
       
     </div> 

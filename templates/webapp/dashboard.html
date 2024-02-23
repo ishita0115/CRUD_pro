@@ -1,11 +1,11 @@
 {% extends 'webapp/base.html' %}
-
+{% load static %}
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 <body>
-<h1>welcome to the dashboard page! {{user}}</h1>
+<h1>welcome to the dashboard page {{user}} 🙂 </h1>
 <br>
-<a class="btn btn-outline-secondary" href="{% url 'create-record' %}">Create a new record</a>
+<a class="btn btn-outline-secondary" href="{% url 'create-record' %}">Create a new record &nbsp; <i class="fa fa-user" aria-hidden="true"></i></a>
 <br>
 <hr>
 <table class="table table-bordered">
@@ -17,6 +17,7 @@
       <th scope="col">phone number</th>
       <th scope="col">email adress</th>
       <th scope="col">city</th>
+      <th scope="col">view</th>
     </tr>
   </thead>
   
@@ -31,6 +32,7 @@
       <td>{{record.email}}</td>
       <td>{{record.phone}}</td>
       <td>{{record.city}}</td>
+      <td><a href="{% url 'view-record' record.id %}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
     </tr>
     {% endfor %}
     {% endif %}

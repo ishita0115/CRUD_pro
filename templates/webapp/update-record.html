@@ -1,0 +1,22 @@
+{% extends 'webapp/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<body>
+    <div class="container bg-light shadow-md p-5 form-layout">
+        <h3>UPDATE THE RECORD </h3>
+        <h6>update your record down below..</h6>
+        <hr>
+        <br>
+        <form action="" method="POST" autocomplete="off">
+            {% csrf_token %} 
+    
+            {{form|crispy}}
+            <br>
+            <button type="submit" class="btn btn-primary w-100 btn-block p-2">update record &nbsp;<i class="fa fa-plus" aria-hidden="true"></i></button>
+        </form>
+      
+    </div> 
+</body>
+{% endblock %}
