@@ -1,7 +1,42 @@
 {% extends 'webapp/base.html' %}
 
-
 {% block content %}
+
+<body>
 <h1>welcome to the dashboard page! {{user}}</h1>
+<br>
+<a class="btn btn-outline-secondary" href="{% url 'create-record' %}">Create a new record</a>
+<br>
+<hr>
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">no of pepole</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">phone number</th>
+      <th scope="col">email adress</th>
+      <th scope="col">city</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    {% if records %}
+    {% for record in records %}
+    <tr>
+      
+      <th scope="row">{{record.id}}</th>
+      <td>{{record.first_name}}</td>
+      <td>{{record.last_name}}</td>
+      <td>{{record.email}}</td>
+      <td>{{record.phone}}</td>
+      <td>{{record.city}}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+
+</body>
 
 {% endblock %}
